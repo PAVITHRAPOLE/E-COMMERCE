@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+   <div class="row">
+       <div class="col-sm-6">
+           <img src="{%  static 'IMAGES\register.jpg' %}" class="img img-fluid rounded-circle w-75" alt="">
+       </div>
+       <div class="col-sm-6 alert bg-info text-white">
+           <div>
+            <h1 style="font-family: Agency FB;">Register Now</h1>
+            <span>{{msg}}</span>
+            <form action="/doregister" method="">
+               <div class="mb-3">
+                  <input name="fullname" id="fullnameid" class="form-control border border-3 border-black"type="text" placeholder="Fullname:"required> 
+               </div>
+               <div class="mb-3">
+                   <input name="email" id="unique" class="form-control border border-3 border-black"type="text" placeholder="email:"required> 
+                </div>
+                <div class="mb-3">
+                   <input name="password" id="passwordid" class="form-control border border-3 border-black"type="password" placeholder="password:"required> 
+                </div>
+                <div class="mb-3">
+                   <input name="mobile" id="mobileid" class="form-control border border-3 border-black"type="text" placeholder="mobile:"required> 
+                </div>
+                <div class="mb-3">
+                  <select class="form-select border border-3 border-black" name="country" id="countryid">
+                      <option value="country">--Country--</option>
+                      <option value="india">India</option>
+                      <option value="srilanka">srilanka</option>
+                      <option value="korea">korea</option>
+                  </select>
+              </div>
+              <div class="mb-3 border border-3 border-black p-2 rounded">
+               <label class="d-block h6">Gender</label>
+               <input  class="form-check-inline" type="radio">Male
+               <input  class="form-check-inline" type="radio">Female
+               <input  class="form-check-inline" type="radio">Other
+           </div>
+
+              <div>
+
+                <div class="mb-3">
+                   <input name="address" id="addressid" class="form-control border border-3 border-black"type="text" placeholder="Address:"required> 
+                </div>
+               <div class="mb-2">
+                   <button  class="btn btn-danger text-white" type="submit">Register</button>
+                   <button  class="btn btn-primary text-white" type="reset">Reset</button>
+               </div>
+            </form>
+           </div>
+       </div>
+     </div>
+   </div>
+{% endblock %}

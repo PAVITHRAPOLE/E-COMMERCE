@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+          Admin Layout
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+    <link rel="icon" href="{% static 'IMAGES\logo.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body class="white">
+    <h1 class="text-center">online Shopping</h1>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html">
+                <img src="{% static 'IMAGES\logo.png'%}" style="width: 3em;" alt="">
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mymenu" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mymenu">
+                <ul class="navbar-nav">
+                   <li class="nav-item">
+                    <a class="nav-link" href="/viewusers">View Users</a>
+                   </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button class="active" data-bs-target="#demo" data-bs-slide-to="0"></button>
+            <button data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'IMAGES\1s.png'%}" class="img img-fluid  d-block w-100" alt="">
+            </div>
+            <div class="carousel-item ">
+                <img src="{% static 'IMAGES\2s.png'%}" class="img img-fluid d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images\3s.jpg'%}" class="img img-fluid d-block w-100" alt="">
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark"></span>
+        </button>
+    </div>
+    {% endblock %}
+    
+    {% block footer %}
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container-fluid my-5">
+
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #1c2331"
+            >
+      <!-- Section: Social media -->
+      <section
+               class="d-flex justify-content-between p-4"
+               style="background-color: #6351ce"
+               >
+        <!-- Left -->
+        <div class="me-5">
+          <span>Get connected with us on online shopping:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold text-warning">Amazon/Meesho/Flipkart</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app. Consumers find a product of interest by visiting the website of the retailer directly or by searching among alternative vendors using a shopping search engine, which displays the same product's availability and pricing at different e-retailers. As of 2020, customers can shop online using a range of different computers and devices, including desktop computers, laptops, tablet computers and smartphones.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-3">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold text-warning">Products</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!" class="text-white">Jwellery</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Dresses</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Footwear</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Collection of books</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Metal Bootles/Bootles</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">College Bages/School Bags/Trolley Bags</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold text-warning">Useful links</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!" class="text-white">Your Account</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Become an Affiliate</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Shipping Rates</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Help</a>
+              </p>
+              <p><img src="{% static 'IMAGES\qr.avif'%}" style="width: 11em;" alt=""></p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold text-warning">Contact</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p><i class="fas fa-home mr-2"></i> India, IN 10012</p>
+              <p><i class="fas fa-envelope mr-2"></i> info@example.com</p>
+              <p><i class="fas fa-phone mr-2"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print mr-2"></i> + 01 234 567 89</p>
+              <div class="mt-3">
+
+            
+              <!-- Left -->
+        
+              <!-- Right -->
+            
+                 <p><i class="fa fa-facebook" aria-hidden="true"></i>   FaceBook</p>
+                 <p><i class="fa fa-twitter" aria-hidden="true"></i>   Twitter</p>
+                 <p><i class="fa fa-google" aria-hidden="true"></i>   Google</p> 
+                 <p><i class="fa fa-instagram" aria-hidden="true">   Instagram</i></p>
+                 <p><i class="fa fa-linkedin" aria-hidden="true"></i>   Linkedin</p>
+                 </div>
+            </div>
+          </div>
+        </div>
+              <!-- Right -->
+            </section>
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2024 Copyright:
+        <a class="text-white" href="https://OnlineShopping.com/"
+           >Online Shopping.com</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  
+  </div>
+  <!-- End of .container -->
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+   <div class="row">
+       <div class="col-sm-6">
+        <img src="{%  static 'IMAGES\login.webp' %}" class="img img-fluid rounded-circle w-50" alt="">
+       </div>
+       <div class="col-sm-6 alert bg-rgb(255,255,192)">
+            <h1 style="font-family: Agency FB;">Login</h1>
+            <span>{{msg}}</span>
+            <form action="\logincheck" method="">
+                <div class="mb-3">
+                    <input name="email" id="emailid" class="form-control border border-3 border-black"type="text" placeholder="email:"required> 
+                 </div>
+                 <div class="mb-5">
+                    <input name="password" id="passwordid" class="form-control border border-3 border-black"type="password" placeholder="password:"required> 
+                 </div>
+                 <div class="mb-2">
+                    <button  class="btn btn-danger text-white" type="submit">Login</button>
+                    <button  class="btn btn-success text-white" type="reset">Reset</button>
+                </div>
+    </div>
+</div>
+             </form>
+ {% endblock %}

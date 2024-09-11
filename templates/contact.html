@@ -1,0 +1,72 @@
+{% extends "index.html"%}
+{% load static %}
+{% block content %}
+<div style="background-color:rgb(144,155,300); color:white;">
+<h1 class="text-center">Contact Us</h1>
+<h5 style="padding-left:150px;">For any queries please contact us as given details</h5>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-3">
+                <img   class=" rounded-circle"style="width:7em;"src="{% static 'IMAGES\contact.jpg' %}" alt="">
+                </div>
+              <div class="col-sm-3" style="color:black;">
+                <h3><u>Address</u></h3>
+                <p> K.V.R petrol bunk Nellore D.t., Andhra pradesh</p>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <img   class="img img-thumbnail"style="width:4em;"src="{% static 'IMAGES\mail.jpg' %}" alt="">
+                </div>
+                <div class="col-sm-3" style="color:black;">
+                 <h3><u>E-mail</u></h3>
+                  <a style="color:black;" href="mailto:devasaniy@gmail.com"> Inorder  to resolve your problem. Please click on the Link.
+                  </a>
+                </div>
+              </div>  
+              <div class="row">
+                <div class="col-sm-3">
+                    <img   class=" img img-thumbnail"style="width:4em;"src="{% static 'IMAGES\whats.jpg' %}" alt="">
+                  </div>
+                  <div class="col-sm-3" style="color:black;">
+                 <h3><u>WhatsWeb</u></h3>
+                  <a style="color:black;" href="https://web.whatsapp.com/">6302913037
+                  </a>
+                </div>
+              </div>  
+        </div>  
+        <div class="col-sm-6 ">
+            <div style="background-color:rgb(255,255,192);box-shadow:purple; color:black;width:100%; ">
+                <h3 style="margin-left:5px;">Query Message</h3>
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                  <input type="hidden" name="access_key" value="9fc63fcd-b0a0-421b-8e0e-dff9de161b42">
+              
+                  <input type="text" name="name"  placeholder="your Name"required>
+                  <input type="email" name="email" placeholder="Email" required>
+                  <div>
+                  <textarea name="message" placeholder="Your Message"required></textarea></div>
+                  <button type="submit">Submit </button>
+              
+                </form>
+           </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+    .col-sm-6 input{
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        width:97%;
+        padding: 10px;
+        margin: 10px;
+        padding-right: 30%;
+       
+    }
+</style>
+{% endblock %}
